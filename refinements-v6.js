@@ -110,3 +110,11 @@ populate = function () {
   });
 };
 paint();
+const screenHTMLBeforeCaseFix = screenHTML;
+screenHTML = function (...args) {
+  return screenHTMLBeforeCaseFix(...args).replace(
+    /(tss\/ccs\/)([0-9a-f]{16})/gi,
+    (_, prefix, id) => prefix + id.toUpperCase()
+  );
+};
+paint();
