@@ -1,0 +1,199 @@
+/* ---- css for PC Browser ---------------- */
+
+* {
+/*	font-family : 'Wii NTLG PGothic'; */
+	font-family : 'TWL_NTLG-PGothic-DB';
+}
+
+
+
+/* #### 20080712 #### Changed image path. */
+/*-- scroll button --*/
+
+#upWinU {
+	position : fixed;
+	left   : 0px;
+	top    : 0px;
+	width  : 24px;
+	height : 24px;
+	background-image: url(../image/pc/arrowU_24x24_all.gif);
+	background-repeat:  no-repeat;
+	background-position: 0px 0px;
+	overflow: hidden;
+	z-index : 5;
+	visibility : hidden;
+}
+
+/* #### 20080712 #### Changed image path. */
+#upWinD {
+	position : fixed;
+	left   : 0px;
+	top    : 0px;
+	width  : 24px;
+	height : 24px;
+	background-image: url(../image/pc/arrowD_24x24_all.gif);
+	background-repeat:  no-repeat;
+	background-position: 0px 0px;
+	overflow: hidden;
+	z-index : 5;
+	visibility : hidden;
+}
+
+/* #### 20080712 #### Changed image path. */
+#dnWinU {
+	position : fixed;
+	left   : 0px;
+	top    : 0px;
+	width  : 24px;
+	height : 24px;
+	background-image: url(../image/pc/arrowU_24x24_all.gif);
+	background-repeat:  no-repeat;
+	background-position: 0px 0px;
+	overflow: hidden;
+	z-index : 5;
+	visibility : hidden;
+}
+
+/* #### 20080712 #### Changed image path. */
+#dnWinD {
+	position : fixed;
+	left   : 0px;
+	top    : 0px;
+	width  : 24px;
+	height : 24px;
+	background-image: url(../image/pc/arrowD_24x24_all.gif);
+	background-repeat:  no-repeat;
+	background-position: 0px 0px;
+	overflow: hidden;
+	z-index : 5;
+	visibility : hidden;
+}
+
+
+/* #### 20080628 #### for loading icon */
+/* #### 20080712 #### Changed image path. */
+#loadingIcon {
+	position : fixed;
+	left   : 0px;
+	top    : 0px;
+	width  : 16px;
+	height : 16px;
+	background-image: url(../image/pc/loadingIcon.gif);
+	z-index : 20;
+	visibility : hidden;
+}
+
+/* #### 20080628 #### for wifi icon */
+/* #### 20080712 #### Changed image path. */
+#wifiIcon {
+	position : fixed;
+	left   : 239px;
+	top    : 175px;
+	width  : 16px;
+	height : 16px;
+	background-image: url(../image/pc/wifiIcon.gif);
+	z-index : 20;
+}
+
+/* #### 20080712 #### for scroll_tab */
+/* #### 20080712 #### Changed image path. */
+/* #### 20080908 #### Changed position from "absolute" to "fixed". */
+#scroll_tab {
+	position : fixed;
+	left   : 0px;
+	top    : 0px;
+	width  : 256px;
+	height : 26px;
+	background-image : url(../image/pc/scroll_tab.gif);
+	background-repeat : no-repeat;
+	background-position : 0px 0px;
+	overflow : hidden;
+	visibility : hidden; /* #### 20080920 #### Added for bug fix. */
+/*	z-index : -1; */
+}
+
+/* #### 20080714 #### Added to disable all. */
+#disable_all {
+	position : fixed;
+	left   : 0px;
+	top    : 0px;
+	width  : 256px;
+	height : 192px;
+	z-index : -1;
+}
+
+
+/* #### 20080715 #### Added to display particle on click. */
+#particle {
+	position : absolute;
+	left   : 0px;
+	top    : 0px;
+	width  : 36px;
+	height : 36px;
+	background-image: url(../image/pc/particle.gif);
+	z-index : 20;
+	visibility : hidden;
+}
+
+
+
+
+
+
+/* #### 20080921 #### Added for progress bar. */
+#epb {
+	position: absolute;
+	left:    0px;
+	top:    70px;
+	width: 256px;
+	height: 40px;
+	visibility: hidden;
+}
+
+/* #### 20080921 #### Added for progress bar. */
+#bob {
+	position: absolute;
+	left:   112px;
+	top:      0px;
+	width:   30px;
+	height:  30px;
+	border: solid 1px #34beed;
+}
+
+/* #### 20080921 #### Added for progress bar. */
+#boi {
+	position: absolute;
+	left:     0px;
+	top:     30px;
+	width:   30px;
+	height:   0px;
+	background-color: #34beed;
+}
+
+
+/* #### 20080921 #### Added for progress bar. */
+#epc {
+	position: absolute;
+	left:    0px;
+	top:    70px;
+	width: 256px;
+	height: 40px;
+	visibility: hidden;
+}
+
+
+/* #### 20080921 #### Added for progress bar. */
+.mp {
+	position: absolute;
+	left:   -30px;
+	top:     14px;
+	width:  142px;
+}
+
+/* #### 20080921 #### Added for progress bar. */
+.lk {
+	position: absolute;
+	left:   144px;
+	top:     14px;
+	width:  142px;
+}

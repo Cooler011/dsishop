@@ -1,0 +1,21 @@
+{
+  "regions": {
+    "EU": {
+      "titles": 490,
+      "linked": 490
+    },
+    "JP": {
+      "titles": 490,
+      "linked": 490
+    },
+    "US": {
+      "titles": 606,
+      "linked": 606
+    }
+  },
+  "methods": {
+    "No-Intro serial metadata": 828,
+    "NDS header": 758
+  },
+  "unmatched": []
+}

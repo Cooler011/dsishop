@@ -1,0 +1,120 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script language="JavaScript" src='../js/query.js'></script>
+<script type="text/javascript">
+function initPage() {
+      // Get country/language/region from URL parameters
+      var qs = new Querystring();
+      var country = qs.get("country");
+      var language = qs.get("language");
+      var region = qs.get("region");  
+      var countryRegion = qs.get("countryRegion");
+      var upWindowName = qs.get("upWindowName");
+      var downWindowName = qs.get("downWindowName");
+      var needKong =  qs.get("needKong");
+
+      // Decide on entry point depending on country/language/region
+      var entry;
+      var entry_u;
+
+      if (region == "EUR") {
+        if (language == "es") {
+          entry = "manual/NOE/esp/M_01_d.html";
+          entry_u = "manual/NOE/esp/M_01_u.html";
+        } else if (language == "fr") {
+          entry = "manual/NOE/fra/M_01_d.html";
+          entry_u = "manual/NOE/fra/M_01_u.html";
+        } else if (language == "de") {
+          if (country == "DE") {
+            entry = "manual/NOE/noe/M_01_d.html";
+            entry_u = "manual/NOE/noe/M_01_u.html";
+          } else {
+            entry = "manual/NOE/ger/M_01_d.html";
+            entry_u = "manual/NOE/ger/M_01_u.html";
+          }
+        } else if (language == "it") {
+          entry = "manual/NOE/ita/M_01_d.html";
+          entry_u = "manual/NOE/ita/M_01_u.html";
+        } else {
+          entry = "manual/NOE/ukv/M_01_d.html";
+          entry_u = "manual/NOE/ukv/M_01_u.html";
+        }
+      } else {
+        entry = "manual/NOE/ukv/M_01_d.html";
+        entry_u = "manual/NOE/ukv/M_01_u.html";
+      }
+
+
+      var param = "?";
+      
+      if (upWindowName!=null && upWindowName!="")
+      {
+      	    param += "upWindowName="+upWindowName;
+      }
+      if (downWindowName!=null && downWindowName!="") {
+      	if (param != "?") {
+      		param += "&";
+      	}
+      	param += "downWindowName="+downWindowName;
+      }
+      if (needKong!=null && needKong!="") {
+      	if (param != "?") {
+      		param += "&";
+      	}
+      	param += "needKong="+needKong;
+      }
+      
+      if ( param != "?" )
+      {
+        entry += param;
+        entry_u += param;
+      }
+      
+      /*
+      var firstParam = true;
+      if (upWindowName!=null && upWindowName!="") {
+      	if (firstParam) {
+      		entry += "?";
+      		firstParam = false;
+      	}
+      	entry += "upWindowName="+upWindowName;
+      }
+      
+      if (downWindowName!=null && downWindowName!="") {
+      	if (firstParam) {
+      		entry += "?";
+      		firstParam = false;
+      	} else {
+      		entry += "&";
+      	}
+      	entry += "downWindowName="+downWindowName;
+      }
+      
+      if (needKong!=null && needKong!="") {
+      	if (firstParam) {
+      		entry += "?";
+      		firstParam = false;
+      	} else {
+      		entry += "&";
+      	}
+      	entry += "needKong="+needKong;
+      }
+      */
+      
+      window.open(entry_u, upWindowName);
+      
+      // Switch to appropriate entry point
+      parent.location.href = entry;
+}
+
+</script>
+</head>
+
+<body onload="initPage()">
+</body>
+
+</html>

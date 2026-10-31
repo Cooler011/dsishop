@@ -1,0 +1,45 @@
+{
+  "source": "sound_data.sdat SAR_SE + archived base.js/Button.js",
+  "events": {
+    "16": {
+      "name": "TWL_CMN_SE_TOUCH",
+      "notes": 2
+    },
+    "17": {
+      "name": "TWL_CMN_SE_DECIDE",
+      "notes": 10
+    },
+    "23": {
+      "name": "TWL_CMN_SE_INVALID",
+      "notes": 1
+    },
+    "33": {
+      "name": "TWL_SHP_SE_DL_TAMA",
+      "notes": 2
+    },
+    "34": {
+      "name": "TWL_SHP_SE_DL_DATA",
+      "notes": 1
+    },
+    "35": {
+      "name": "TWL_SHP_SE_COMPLETED",
+      "notes": 16
+    },
+    "36": {
+      "name": "TWL_SHP_SE_WARNING_PAGE",
+      "notes": 3
+    },
+    "37": {
+      "name": "TWL_SHP_SE_LOADED",
+      "notes": 20
+    },
+    "39": {
+      "name": "TWL_SHP_SE_SCROLL",
+      "notes": 3
+    },
+    "40": {
+      "name": "TWL_SHP_SE_SCROLL_INVALID",
+      "notes": 2
+    }
+  }
+}

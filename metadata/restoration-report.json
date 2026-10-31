@@ -1,0 +1,21 @@
+{
+  "catalogue": 1586,
+  "regions": {
+    "EU": {
+      "titles": 490,
+      "linked": 490
+    },
+    "JP": {
+      "titles": 490,
+      "linked": 490
+    },
+    "US": {
+      "titles": 606,
+      "linked": 606
+    }
+  },
+  "dates": 1564,
+  "genres": 1570,
+  "prices": 1586,
+  "historicalPopularity": "Not present in the backup; Popular Titles is a curated list of recognizable titles."
+}

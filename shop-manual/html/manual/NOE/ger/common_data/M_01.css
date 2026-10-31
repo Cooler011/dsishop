@@ -1,0 +1,121 @@
+.tx12BBold {font-size : 12px; color : #000000;}
+.tx12RBold {font-size : 12px; color : red;}
+
+/* C_01_u.css */
+.page_title {
+    position: fixed;
+	left   : 0px;
+	top    : 0px;
+	width  : 248px;
+	height : 22px;
+	background-image : url(../common_data/titleBar.gif);
+	background-repeat : repeat-x;
+	background-position : 0px 0px;
+	overflow : hidden;
+	display        : table-cell;
+	vertical-align : middle;
+	text-align     : left;
+	z-index : 5;
+	padding : 0px 4px;
+}
+
+.bg_image {
+    position: absolute;
+	left   : 0px;
+	top    : 0px;
+}
+
+.up_message {
+	position : absolute;
+	left  :   0px;
+	top   :  28px;
+	width : 248px;
+	height: 136px;
+	margin: 0px 4px;
+}
+
+.up_message_scrollable {
+	width : 248px;
+	margin  : 28px 4px 22px 4px;
+}
+
+/* class : manPage_u */
+.manPage_u {
+	width : 240px;
+	margin  : 26px 8px 22px 8px;
+}
+
+/* text-indent */
+.list {
+	padding-left:1em;text-indent:-1em;
+}
+
+
+/* spacer */
+.margin5tu	{margin: 5px 0;}
+.margin10tu	{margin:10px 0;}
+.margin20tu	{margin:20px 0;}
+.margin30tu	{margin:30px 0;}
+
+.margin5t	{margin-top: 5px;}
+.margin10t	{margin-top:10px;}
+.margin20t	{margin-top:20px;}
+.margin30t	{margin-top:30px;}
+
+
+/* float right */
+.imgFloatRight {margin:0 0 3px 6px; float:right;}
+
+
+/* For Q&A page */
+.qaCap {
+	width: 24px;
+	float: left;
+}
+
+.qaText {
+	width: 204px;
+}
+
+.qaTop {
+    position: relative;
+	background-color: #3BC8F1;
+	border: solid 1px #3BC8F1;
+	padding: 6px 0 6px 3px;
+	overflow: visible;
+}
+
+.qaBottom {
+    position: relative;
+	background-color: #E8F7FC;
+	border: solid 1px #3BC8F1;
+	padding: 6px 0 12px 3px;
+	overflow: visible;
+}
+
+
+/* For support page */
+.supTop {
+    position: relative;
+	background-color: #3BC8F1;
+	border: solid 1px #3BC8F1;
+	padding: 6px 0 6px 3px;
+	overflow: visible;
+	text-align: center;
+}
+
+.supBottom {
+    position: relative;
+	background-color: #E8F7FC;
+	border: solid 1px #3BC8F1;
+	padding: 6px 0 12px 3px;
+	overflow: visible;
+	text-align: center;
+}
+
+
+/* For round */
+.tbl_tl { position : absolute; left :  -1px; top  :   -1px; background-image: url(../common_data/tbl_tl.gif); width: 7px; height: 7px; }
+.tbl_tr { position : absolute; right:  -1px; top  :   -1px; background-image: url(../common_data/tbl_tr.gif); width: 7px; height: 7px; }
+.tbl_bl { position : absolute; left :  -1px; bottom : -1px; background-image: url(../common_data/tbl_bl.gif); width: 7px; height: 7px; }
+.tbl_br { position : absolute; right:  -1px; bottom : -1px; background-image: url(../common_data/tbl_br.gif); width: 7px; height: 7px; }

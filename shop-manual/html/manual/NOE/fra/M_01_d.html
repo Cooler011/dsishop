@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+<!-- start_of_header -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<!--
+    NOTE: query.js & shop.js are are overwritten by the server side, change on a local is not reflected. 
+-->
+<script language="JavaScript" src='../../../../js/query.js'></script>
+<!-- <script language="JavaScript" src='../../../../js/shop.js'></script> -->
+<script type="text/javascript" src="../../../../js/manual_oss.js"></script>
+<script type="text/javascript" src="../../../../js/manual_base.js"></script>
+
+<script type="text/JavaScript">
+<!--
+var qs = new Querystring();
+var upWindowName = qs.get("upWindowName");
+var downWindowName = qs.get("downWindowName");
+var needKong = qs.get("needKong");
+
+if (needKong == "true") {
+    document.write("<script type='text/javascript' src='../../../../js/kong.js' />");
+
+} else {
+    // <!-- #### for PC Opera 2009/02/26 #### -->
+    var upWindowName = "UpWindow";
+    var downWindowName = "DownWindow";
+
+    document.write("<link rel='stylesheet' type='text/css' href='../../../../css/pc/pc.css'>");
+}
+//-->
+</script>
+
+<link rel="stylesheet" type="text/css" href="../../../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../../../css/preload.css">
+<link rel="stylesheet" type="text/css" href="../../../../css/button_base.css">
+<link rel="stylesheet" type="text/css" href="index_data/M_01_d.css">
+
+<script language="JavaScript" src="../../../../js/Common.js"></script>
+<script language="JavaScript" src="../../../../js/kugi/Button.js"></script>
+<script language="JavaScript" src="../../../../js/kugi/SceneChanger.js"></script>
+<script language="JavaScript" src="../../../../js/kugi/Transit.js"></script>
+
+<title>M_01_d</title>
+
+
+<script type="text/JavaScript">
+/* ---------- base.js ---------- */
+function onload_scroll() {
+    var TWL_SHOP_SE_TRANSIT = 37;
+    
+	gkong.ShowUpWindowScrollButton();
+	gkong.PlaySE(TWL_SHOP_SE_TRANSIT);
+}
+
+/* ---------- inline script ---------- */
+window.addEventListener('DOMContentLoaded', initPage, false );
+
+var indexChanger;
+
+function initPage()
+{
+ 	indexChanger    = new kugi.SceneChanger( $("indexButtonBases").children, $("indexButtonContents").children );
+    
+    btnPrev.onmouseup   = "changeIndexButtons(-1)";
+    btnNext.onmouseup   = "changeIndexButtons(+1)";
+    btnBack.onmouseup   = "showBackInManual()";
+    
+    showPageNumber();
+    showPageTitle();
+    
+    if ( gkong )
+        onload_scroll();
+}
+
+function changeIndexButtons( relative )
+{
+    var _setupIndexButtons = function()
+    {
+        indexChanger.move( relative );
+        showPageNumber();
+        showPageTitle();
+        kugi.Button.reset();
+	gkong.PlaySE(TWL_SHOP_SE_TRANSIT);
+    }
+    
+    if ( gkong )
+    {
+        var gTRangeUpY0 =   0;
+        var gTRangeUpY1 = 192;  /* #### 20080711 #### Changed from 191 to 192. */
+        var gTRangeDnY0 =   0;
+        var gTRangeDnY1 = 164;
+        gkong.SetTransitionRangeOnce( gTRangeUpY0, gTRangeUpY1, gTRangeDnY0, gTRangeDnY1 );
+    }
+    
+    var anim_d = ( relative > 0 ) ? WIPE_ANIM_OVER_RIGHT : WIPE_ANIM_OVER_LEFT;
+    kugi.Transit.changeScene( _setupIndexButtons, anim_d, WIPE_ANIM_NONE );
+}
+
+function showPageNumber()
+{
+    pageNumber.innerHTML = (indexChanger.getCurrentPage() + 1 ) + " / " + indexChanger.getPageNum();
+}
+
+function showPageTitle()
+{
+    // <!-- Down Window Title -->
+    // <!-- TODO : Please change this part. -->
+    var title = "Sommaire";
+    $("msgTitle").innerHTML = title + " " + (indexChanger.getCurrentPage() + 1);
+}
+
+function showUpContent( url )
+{
+    kugi.Transit.movePage( "", url, WIPE_ANIM_NONE, WIPE_ANIM_UP );
+}
+
+function showBackInManual()
+{
+    var up_url = ec.getSessionValue("history.manual.urlU");
+    var dw_url = ec.getSessionValue("history.manual.urlD");
+    
+    showPage( dw_url, up_url );
+}
+</script>
+
+<!-- end_of_header -->
+</head>
+
+
+<body>
+
+<!----- Down Page ----->
+<!-- IndexButton Bases -->
+<div id="indexButtonBases">
+    <div id="IndexButton0"></div>
+    <div id="IndexButton1"></div>
+    <div id="IndexButton2"></div>
+    <div id="IndexButton3"></div>
+    <div id="IndexButton4"></div>
+</div>
+
+
+<!-- IndexButton Contents -->
+<!-- TODO : Please change this part. -->
+<div class="preload" id="indexButtonContents">
+    <!-- Index 1 -->
+    <div class="btn_base button_240x24" onmouseup="showUpContent('page_01/M_01_p01_u.html')" shpbtn>
+        <div class="btnNum tx12 vh_middle">1</div>
+        <span class="btnContent tx12 v_middle">Présentation</span>
+    </div>
+    
+    <!-- Index 2 -->
+    <div class="btn_base button_240x24" onmouseup="showUpContent('page_02/M_01_p02_u.html')" shpbtn>
+        <span class="btnNum tx12 vh_middle">2</span>
+        <span class="btnContent tx12 v_middle">Menu principal</span>
+    </div>
+    
+    <!-- Index 3 -->
+    <div class="btn_base button_240x24" onmouseup="showUpContent('page_03/M_01_p03_u.html')" shpbtn>
+        <span class="btnNum tx12 vh_middle">3</span>
+        <span class="btnContent tx12 v_middle">Nintendo DSiWare</span>
+    </div>
+    
+    <!-- Index 4 -->
+    <div class="btn_base button_240x24" onmouseup="showUpContent('page_04/M_01_p04_u.html')" shpbtn>
+        <span class="btnNum tx12 vh_middle">4</span>
+        <span class="btnContent tx12 v_middle">Télécharger un logiciel</span>
+    </div>
+    
+    <!-- Index 5 -->
+    <div class="btn_base button_240x24" onmouseup="showUpContent('page_05/M_01_p05_u.html')" shpbtn>
+        <span class="btnNum tx12 vh_middle">5</span>
+        <span class="btnContent tx12 v_middle">Ajouter des points</span>
+    </div>
+    
+    <!-- Index 6 -->
+    <div class="btn_base button_240x24" onmouseup="showUpContent('page_06/M_01_p06_u.html')" shpbtn>
+        <span class="btnNum tx12 vh_middle">6</span>
+        <span class="btnContent tx12 v_middle">Activités sur votre compte</span>
+    </div>
+    
+    <!-- Index 7 -->
+    <div class="btn_base button_240x24" onmouseup="showUpContent('page_07/M_01_p07_u.html')" shpbtn>
+        <div class="btnNum tx12 vh_middle">7</div>
+        <span class="btnContent tx12 v_middle">Titres déjà téléchargés</span>
+    </div>
+    
+    <!-- Index 8 -->
+    <div class="btn_base button_240x24" onmouseup="showUpContent('page_08/M_01_p08_u.html')" shpbtn>
+        <div class="btnNum tx12 vh_middle">8</div>
+        <span class="btnContent tx12 v_middle">Paramètres/Autres</span>
+    </div>
+    
+    <!-- Index 9 -->
+    <div class="btn_base button_240x24" onmouseup="showUpContent('page_09/M_01_p09_u.html')" shpbtn>
+        <div class="btnNum tx12 vh_middle">9</div>
+        <span class="btnContent tx12 v_middle">Contrôle parental</span>
+    </div>
+    
+    <!-- Index 10 -->
+    <div class="btn_base button_240x24" onmouseup="showUpContent('page_10/M_01_p10_u.html')" shpbtn>
+        <div class="btnNum tx12 vh_middle">10</div>
+        <span class="btnContent tx12 v_middle">FAQ</span>
+    </div>
+</div>
+
+<!-- title -->
+<div id="msgTitle" class="tx16"></div>
+
+<!-- left button -->
+<!-- TODO : Please change this part. -->
+<div class="btn_base button_left" id="btnBack" shpbtn>
+    <span class="vh_middle tx12 cWhite">Retour</span>
+</div>
+
+<!-- page box -->
+<div class="btn_base button_prev" id="btnPrev" shpbtn></div>
+<div class="page_number_box tx12">
+    <div class="vh_middle" id="pageNumber"></div>
+</div>
+<div class="btn_base button_next" id="btnNext" shpbtn></div>
+
+</body>
+
+</html>
+

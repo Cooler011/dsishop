@@ -1,0 +1,61 @@
+/* bottom_button */
+.button_left {
+    left :   0px;
+    top  : 164px;
+	width  : 128px;
+	height : 28px;
+	background-image : url(violet_128x28_all.gif);
+}
+
+/* prev_next_button */
+.button_prev {
+	width  : 24px;
+	height : 24px;
+	background-image : url(prev_button.gif);
+    left : 136px;
+	top : 166px;
+}
+.button_next {
+	width  : 24px;
+	height : 24px;
+	background-image : url(next_button.gif);
+	left : 230px;
+	top : 166px;
+}
+
+.page_number_box {
+    position: absolute;
+	left   : 160px;
+	top    : 166px;
+	width  : 70px;
+	height : 24px;
+}
+
+.button_240x24 {
+	width  : 240px;
+	height : 24px;
+	background-image : url(manButton.png);
+}
+
+.btnNum {
+	width   : 30px;
+	padding : 0px;
+}
+
+.btnContent {
+	width   : 200px;
+	padding : 0px 0px 0px 8px;
+}
+
+#IndexButton0 { position : absolute; left :   8px; top :  30px; }
+#IndexButton1 { position : absolute; left :   8px; top :  56px; }
+#IndexButton2 { position : absolute; left :   8px; top :  82px; }
+#IndexButton3 { position : absolute; left :   8px; top : 108px; }
+#IndexButton4 { position : absolute; left :   8px; top : 134px; }
+
+#msgTitle {
+    position: absolute;
+    left: 10px;
+    top: 2px;
+    width: 200px;
+}

@@ -1,0 +1,24 @@
+.btn_base {
+	background-repeat : no-repeat;
+	background-position : 0px 0px;
+	overflow : hidden;
+	position : absolute;
+}
+
+._inner {
+	width  : inherit;
+	height : inherit;
+	padding : 0px 4px;
+	display        : table-cell;
+	vertical-align : middle;
+	text-align     : center;
+}
+
+.btn_spacer {
+	position : absolute;
+	left   : 0px;
+	top    : 0px;
+	width  : inherit;
+	height : inherit;
+	z-index: 99;
+}
