@@ -91,3 +91,22 @@ resize=function(){const s=Math.max(.1,Math.min(2,innerWidth/256,(innerHeight-8)/
 addEventListener('resize',resize);resize();
 const v6NewDownloadAttempt=newDownloadAttempt;newDownloadAttempt=function(){if(selected)sessionStorage.setItem('dsi-download-title',selected.id);return v6NewDownloadAttempt()};
 const requestedV6=decodeURIComponent(location.hash.slice(1));if(ARCHIVE[requestedV6]||ARCHIVE_INDEX[requestedV6])key=requestedV6;if(key==='B_10.jsp'&&!selected)selected=CATALOG.find(g=>g.id===sessionStorage.getItem('dsi-download-title'))||null;paint();
+const populateBeforeIconFix = populate;
+populate = function () {
+  populateBeforeIconFix();
+
+  [U, D].forEach(frame => {
+    frame.contentDocument.querySelectorAll('img').forEach(img => {
+      const src = img.getAttribute('src') || '';
+      if (!/tss\/ccs\/[0-9a-f]{16}/i.test(src)) return;
+
+      const fixed = src.replace(
+        /(tss\/ccs\/)([0-9a-f]{16})/gi,
+        (_, prefix, id) => prefix + id.toUpperCase()
+      );
+
+      img.src = new URL(fixed, base).href;
+    });
+  });
+};
+paint();
